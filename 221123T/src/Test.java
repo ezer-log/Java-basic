@@ -4,18 +4,27 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		//조건연산자 ?: 는 if-else로 바꿀 수 있음
+		Scanner s = new Scanner(System.in);
+		System.out.println("점수 입력:");
 		
-		//조건 연산자
-		i = a>b?a-b:b-a;
+		int kor = s.nextInt();
+		char grade;
 		
-		//조건문
-		if (a>b) {
-			i = a - b;
+		if (kor>=90) {
+			grade = 'A';
+		}
+		else if (kor>=80) {
+			grade = 'B';
+		}
+		else if (kor>=70) {
+			grade = 'C';
 		}
 		else {
-			i = b - a;
+			grade = 'F';
 		}
+		
+		System.out.println("성적: " + grade);
 	}
+	
 
 }
