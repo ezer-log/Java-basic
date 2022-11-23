@@ -4,40 +4,48 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		/*
-		 * <Scanner 클래스>
-		 * 
-		 * System.in 에게 키를 읽게 하고, 읽은 바이트를 문자, 정수, 실수, 불리언, 문자열 등 다양한 타임으로 변환하여 리턴
-		 * Scanner a = new Scanner(System.in);
-		 * 
-		 * import문을 필요로 한다.
-		 * import java.util.Scanner;
-		 * 
-		 */
 		
-		Scanner s = new Scanner(System.in);
-		//System.in에게 키보드값을 읽게 하기 위해 Scanner객체 생성해야 함
-		//클래스명 객체명 = new 클래스명
+		//1. 10/4 한 결과값을 소수점까지 출력해라
 		
-		System.out.println("여러분 이름 입력해주세요");
-		String name = s.next(); //s는 scanner 객체
-		System.out.println("내 이름은 "+ name);
-		//이렇게 하면 콘솔창에 이름을 적을 수 있다!!!!!!! 엔터하면 출력됨...!!!
-		//파이썬의 input 받는거랑 비슷한건가..?
+		double div = (double) 10/4;
+		System.out.println(div);
 		
-		System.out.println("여러분 나이 입력해주세요");
+		//변수 저장 안하고
+		System.out.println((double)10/4);
+		
+		
+		//2. 하나의 정수를 입력받아 그 수의 제곱을 구해라.
+		Scanner s=new Scanner(System.in);
+		System.out.println("정수 입력:");
+		int x = s.nextInt();
+		
+		System.out.println(x*x);
+		
+		// 3. a를 4.0, b를 1.2로 초기화하여 4.0+1.2를 printf로 출력해라.
+		//    실행 결과) 4.0+1.2=5.2
+		
+		double a=4.0, b=1.2;
+		double sum = a+b;
+		System.out.printf("%.1f + %.1f = %.1f\n", a, b, sum);
+
+		//3-1. 앞에서 출력한 5.2를 소수점을 버려라.
+		System.out.println((int)(a+b));
+		
+		// 4. Scanner클래스를 이용하여 이름, 사는 곳, 나이, 체중을 입력받고, 출력하는 프로그램 작성해라.
+		
+		System.out.println("입력해라:");
+		
+		String name = s.next();
+		String city = s.next();
 		int age = s.nextInt();
-		System.out.printf("내 나이는 %d살\n", age);
+		double weight = s.nextDouble();
 		
-		System.out.println("여러분 키 입력해주세요");
-		double height = s.nextDouble();
-		System.out.println("내 키는 "+ height);
+		System.out.println("내 이름은 " + name +"이다.");
+		System.out.println("사는 곳은 " + city +"이고, 나이는 " +age+"살이다.");
+		System.out.println("몸무게는 " + weight +"kg이다.");
 		
-		Scanner s2 = new Scanner(System.in);
-		System.out.println("두 정수 입력하세요");
-		int a=s.nextInt();
-		int b=s.nextInt();
-		System.out.println(a+b);
+		
+
 		
 	}	
 
