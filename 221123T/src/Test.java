@@ -6,18 +6,20 @@ public class Test {
 		
 		Scanner s = new Scanner(System.in);
 		
-		System.out.println("자바 점수 입력해라:");
+		System.out.println("정수입력:");
 		//정수로 입력받아라.
 		
-		int score = s.nextInt();
-		System.out.println("자바 점수는 " + score);
+		int n = s.nextInt();
+		System.out.println("정수는 " + n);
 		
-		if (score >= 90) {
-			System.out.println("합격!");
+		if (n%2==0) {
+			System.out.println("짝수, 2의 배수이다");
 		}
-		System.out.println("불합격!");
+		else {
+			System.out.println("홀수, 2의 배수가 아니다");
+		}
 		
-		
+
 	}	
 
 }
