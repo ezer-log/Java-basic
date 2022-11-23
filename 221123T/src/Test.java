@@ -3,28 +3,24 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		int a,b = 4;
-		a = b++;
-
-		System.out.println(a); //4
-		System.out.println(b); //5
+		int age=30; //정수
+		double ki=177.7; //실수
+		String name="jack"; //문자열
+		char grade='A'; //하나의 문자열
 		
-		/* 
-		 <증감연산자>
-		 1증가가 먼저냐, 대입이 먼저냐를 봐야한다
-		 후위 연산자이기 때문에, 대입을 먼저 한 후 나중에 증가시키겠다는 뜻.
-		*/
+		/*
+		 * 다음 중 기본타입이 아닌 것은?
+		 * String! 
+		 * String은 클래스에 대한 레퍼런스로, 기본 타입이 아니다
+		 */
 		
-		int c,d = 4;
-		c = ++d;
+		System.out.println(age + ki + name + grade); //207.7jackA
 		
-		System.out.println(c); //5
-		System.out.println(d); //5
+		//나열연산자를 쓰면 숫자일때 합이 나온다. (30 + 177.7)
 		
-		/* 
-		 전위 연산자이기 때문에, 증가 시키고 대입.
-		*/
+		System.out.println(age + " " + ki + name + grade); //207.7jackA
 		
-	}
+		// 공백을 넣어주면 따로따로 출력되긴 한다
+	}	
 
 }
