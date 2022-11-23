@@ -24,6 +24,10 @@ public class Test {
 		}
 		
 		System.out.println("성적: " + grade);
+		
+		//조건연산자로 표현
+		char a = kor>=90?'A':'B';
+		System.out.println("성적: " + a);
 	}
 	
 
