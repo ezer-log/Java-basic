@@ -9,18 +9,23 @@ public class Test {
 		char grade='A'; //하나의 문자열
 		
 		/*
-		 * 다음 중 기본타입이 아닌 것은?
-		 * String! 
-		 * String은 클래스에 대한 레퍼런스로, 기본 타입이 아니다
+		 * println : 줄바꿈
+		 * printf :
+		 * print : 줄바꿈 없이 출력
+		 * 
+		 * <printf 로 출력할때 쓰이는 서식문자들>
+		 * 정수 %d
+		 * 실수 %f, %lf
+		 * 문자열 %s
+		 * 문자 %c
 		 */
 		
-		System.out.println(age + ki + name + grade); //207.7jackA
+		System.out.println(age + " " + ki + name + grade);
+		System.out.printf("%d %f %s %c", age, ki, name, grade);
+
+		//실수는 6자리가 기본이라 몇자리까지 하고싶은지 설정가능
+		System.out.printf("%d %.2f %s %c", age, ki, name, grade);
 		
-		//나열연산자를 쓰면 숫자일때 합이 나온다. (30 + 177.7)
-		
-		System.out.println(age + " " + ki + name + grade); //207.7jackA
-		
-		// 공백을 넣어주면 따로따로 출력되긴 한다
 	}	
 
 }
