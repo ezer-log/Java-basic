@@ -4,29 +4,23 @@ public class Test {
 
 	public static void main(String[] args) { 
 		
-		//81~100중에 정수 랜덤으로 뽑기
-		int score = (int) (Math.random()*20) +81;
-		System.out.println(score);
+		//하나씩 올라가는 for문
+		for(int i=1; i<=100; i++) {
+			System.out.println(i);
+		}
 		
-		String grade; //변수선언 (grade)
+		//하나씩 감소하는 for문
+		for(int y=10; y>=0; y--) {
+			System.out.println(y);
+		}
 		
-		if(score>=90) {
-			if(score>=95) {
-				grade="A+";
-			}
-			else { //90점 이상이면서 95점 미
-				grade="A";
+		
+		//1부터 100까지 for문
+		for(int x=1; x<=100; x++) {
+			if (x%5==0 && x%6==0) { //5와 6의 배수 둘다 해당할떄 = 30의 배수
+				System.out.println(x);
 			}
 		}
-		else {
-			if(score>=85) {
-				grade="B+";
-			}
-			else {
-				grade="B";
-			}
-		}
-		System.out.println("학점 : " +grade);
 		
 	}
 }
