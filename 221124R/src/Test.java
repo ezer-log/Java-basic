@@ -4,12 +4,28 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		for(int i=0; i<5; i++) { //행
-//			for(int j=i; j<5; j++) { //열
-			for(int j=0; j<5-i; j++) {
-				System.out.print("*");
-			}
+		for (int i=0; i<10; i++) {
+			
+			if (i<5) {
+				
+				for (int j=0; j<4-i;j++) {
+					System.out.print(" ");
+				}
+				for (int j=0; j<i+1; j++) {
+					System.out.print("*");
+				}
 			System.out.println();
-		}
+			}
+			else {
+				for (int j=0; j<i-5;j++) {
+					System.out.print(" ");
+				}
+				for (int j=0; j<10-i; j++) {
+					System.out.print("*");
+				}
+			System.out.println();
+			}
+
 	}
+}
 }
