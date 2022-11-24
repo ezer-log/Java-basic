@@ -4,18 +4,29 @@ public class Test {
 
 	public static void main(String[] args) { 
 		
+		//81~100중에 정수 랜덤으로 뽑기
+		int score = (int) (Math.random()*20) +81;
+		System.out.println(score);
 		
-		//1~100중에 정수 랜덤으로 뽑기
-		int n = (int) (Math.random()*99) +1;
+		String grade; //변수선언 (grade)
 		
-		if(n%5==0)
-			System.out.println("n은 5의 배수");
-		else if(n%10==0)
-			System.out.println("n은 10의 배수");
-		else {
-			System.out.println("위 조건 다 아님");
+		if(score>=90) {
+			if(score>=95) {
+				grade="A+";
+			}
+			else { //90점 이상이면서 95점 미
+				grade="A";
+			}
 		}
-
+		else {
+			if(score>=85) {
+				grade="B+";
+			}
+			else {
+				grade="B";
+			}
+		}
+		System.out.println("학점 : " +grade);
+		
 	}
-
 }
