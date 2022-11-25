@@ -4,59 +4,34 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-//		1. 숫자를 입력하여 정답 숫자 맞추는 게임
-//		정답을 18로 설정
-//		입력한 숫자가 정답(18)이 아닐 경우 크거나 작은지 알려준다.
-//		정답을 맞출 때까지 숫자 입력을 반복하고 정답을 맞춘 후에는 시도한 횟수 출력
-//		
-//		실행결과)
-//		숫자 입력: 25
-//		25보다 작다!!
-//
-//		숫자 입력: 10
-//		10보다 크다!!
-//		
-//		숫자 입력: 18
-//		정답이다!!
-//		
-//		시도한 횟수는 3번이다.
-		
 		Scanner s = new Scanner(System.in);
-		int answer=18;
+		System.out.println("한 문자 입력");
 		
-		int count = 0;
+		char c = s.next().charAt(0); //c
+		int n = (int)c; //입력한 한 글자를 정수로 강제 형변환
 		
-		while(true) {
-			System.out.println("숫자 입력: "); //입력을 반복해야 하니까 while문 안에다 넣어야 한다
-			int n = s.nextInt();
+		//ASCII code 덕분에 글자->숫자 변환이 가능하다.
+		
+		System.out.println(n); // c -> 99
+
+		for(int i=97; i<=n; i++) { //c
+			System.out.println(i); //97, 98, 99 (97부터 c인 99까지 출력)
+			System.out.println((char)(i)); //문자로 강제 형변환 => a, b, c
 			
-			if (n==answer) {
-				System.out.println("정답!!");
-				count += 1;
-				break;
+			for (int j=i; j<n; j++) {   //i=97~i<=100
+				char ch=(char)j;        //j=97~j<100
+				System.out.println(ch);
 			}
-			else if (n<answer) {
-				count += 1;
-				System.out.println(n + "보다 크다!!");
-			}
-			else if (n>answer) {
-				count += 1;
-				System.out.println(n + "보다 작다!!");
-			}
+			System.out.println();
 		}
-		System.out.println("시도한 횟수는 " + count + "번이다."); //while문 종료 이후에
 		
-		
-		
-		
-		
-		
-		
-
-//		2. JDK에는JRE가 포함되는가?
-//		JVM은 무엇인가?
-		
-		
-
 	}
 }
+
+/*
+i=97일때, j= 내가 입력한 수 (n) 바로 전까지 돈다
+so, i=97 일때 n=c=99 이면 97 98 이렇게 출력된다
+
+A -> 65 : 인코딩
+65 -> A : 디코딩
+*/
