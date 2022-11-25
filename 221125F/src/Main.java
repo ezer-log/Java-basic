@@ -4,18 +4,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-//		4. while문을 이용해서 1부터 100까지 정수 중 5의 배수의 총합을 출력
 		
-		int i=0;
-		int total=0;
+//		5. while, random()을 이용해서 (x,y)형태로 출력하는데 x+y합이 5이면 실행을 멈추는 코드를 작성. 
+//		5가 아니면 난수 계속 발생시키고출력 (x,y 범위는 1부터 5까지)
 		
-		while (i<=100) {
-			if (i%5==0) {
-				total+= i;
-				i++;
+		
+		while (true) {
+			int x = (int) (Math.random()*5)+1;
+			int y = (int) (Math.random()*5)+1;
+			
+			System.out.println("(" + x + " , " + y + ")");
+			
+			if (x+y ==5) {
+				break;
 			}
 		}
-		System.out.println(total);
+		
 	
 
 	}
