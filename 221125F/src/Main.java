@@ -4,14 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int intArray [];
-		intArray[4] = 8; //오류, intArray 배열의 메모리가 할당되지 않았음
+		Scanner s = new Scanner(System.in);
 		
-		int[] intArray;
-		intArray = new int[10];
-		intArray[3] = 6;
-		int n = intArray[3];
+		//실수 3개 배열 생성
+		double a[] = new double[3];
 		
+		//for문 돌리면서 입력
 		
+		for(int i=0; i<3; i++) {
+			a[i] = s.nextDouble();
+			System.out.println(a[i]);
+		}
+	
+
 	}
 }
