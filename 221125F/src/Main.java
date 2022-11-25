@@ -6,15 +6,16 @@ public class Main {
 		
 		Scanner s = new Scanner(System.in);
 		
-		//실수 3개 배열 생성
-		double a[] = new double[3];
+		//5개 실수 입력할 배열을 생성하여
+		double a[] = new double[5];
+		int sum = 0;
 		
-		//for문 돌리면서 입력
-		
-		for(int i=0; i<3; i++) {
+		//5개 실수를 입력해 총합을 출력해라.
+		for (int i=0; i<5; i++) {
 			a[i] = s.nextDouble();
-			System.out.println(a[i]);
+			sum += a[i];
 		}
+		System.out.println("합: "+sum);
 	
 
 	}
