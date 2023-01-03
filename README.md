@@ -2,4 +2,4 @@
 
 # java basics
 ## java
-### problems10
+### problems solved
